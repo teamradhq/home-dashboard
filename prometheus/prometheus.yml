@@ -7,4 +7,4 @@ scrape_configs:
       - targets: ['localhost:9090']
   - job_name: 'node'
     static_configs:
-      - targets: [ '${PI_IP}:9100' ]
+      - targets: [ '${IP_ADDRESS}:9100' ]

@@ -9,7 +9,7 @@ services:
     ports:
       - "9090:9090"
     environment:
-      - PI_IP=${PI_IP}
+      - IP_ADDRESS=${IP_ADDRESS}
 
   grafana:
     image: grafana/grafana
@@ -19,7 +19,7 @@ services:
     volumes:
       - grafana-storage:/var/lib/grafana
     environment:
-      - PI_IP=${PI_IP}
+      - IP_ADDRESS=${IP_ADDRESS}
 
   node-exporter:
     image: prom/node-exporter
@@ -27,7 +27,7 @@ services:
     ports:
       - "9100:9100"
     environment:
-      - PI_IP=${PI_IP}
+      - IP_ADDRESS=${IP_ADDRESS}
 
 volumes:
   grafana-storage:
